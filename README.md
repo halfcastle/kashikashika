@@ -1,7 +1,5 @@
 # kashikashika
 
-# kashikashika
-
 here's what the code does now:
 - **beautifulsoup scraper**: crawls uta-net for all lyrics from a specific artist and saves them in a dataframe with song title, lyrics, and lyricist. formats the csv so that all lyricist names are consistent (e.g. 中島真一 = Nakajin)
 - **janome**, the heart and soul of this whole project: a Japanese lexicon tokenizer. read the official documentation [here](https://mocobeta.github.io/janome/). I ran janome across my lyric files and extracted individual dataframes containing nouns, adjectives, and verbs. however, janome has its limitations when you use it on sekaowa lyrics, because it cannot parse anything written in English.
@@ -56,11 +54,11 @@ use this list of words (words only) → search against masterdoc, increment by 1
 1. word pruning
     - 动词
       <br>
-        <img src="/ksksk/images/doushi.png" width="200">
+        <img src="doushi.png" width="200">
         - 主观的删除了大部分完全由假名构成的动词，因为这些词主要用于修饰汉字动词（例如「勝てる」「質問する」）
     - 形容词
       <br>
-        <img src="/ksksk/images/adjs.png" width="500">  
+        <img src="adjs.png" width="500">  
         - 删除了「ない」「いい」这种词，虽然也很重要但不具有代表/特征性
     - 名词
         - 删除了无意义词，例如ん、よう、の、こと
